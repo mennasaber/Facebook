@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6FAC0ED-C105-419B-B5F3-DB6FB3249AE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>facebook_sql_</RootNamespace>
+    <AssemblyName>facebook%28sql%29</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>C:\Users\Alrahma\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>..\..\Programs\mysql-for-visualstudio-1.2.8-noinstall\15.0v461\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chat.Designer.cs">
+      <DependentUpon>chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="comment.Designer.cs">
+      <DependentUpon>comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comments.Designer.cs">
+      <DependentUpon>comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="friend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="friend.Designer.cs">
+      <DependentUpon>friend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="friend_chat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="friend_chat.Designer.cs">
+      <DependentUpon>friend_chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="liker.Designer.cs">
+      <DependentUpon>liker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="likers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="likers.Designer.cs">
+      <DependentUpon>likers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liker_comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liker_comment.Designer.cs">
+      <DependentUpon>liker_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liker_reply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liker_reply.Designer.cs">
+      <DependentUpon>liker_reply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_page.Designer.cs">
+      <DependentUpon>main_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mess.Designer.cs">
+      <DependentUpon>mess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="messages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="messages.Designer.cs">
+      <DependentUpon>messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="my_friends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="my_friends.Designer.cs">
+      <DependentUpon>my_friends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="post.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="post.Designer.cs">
+      <DependentUpon>post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="read_post.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="read_post.Designer.cs">
+      <DependentUpon>read_post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="replies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="replies.Designer.cs">
+      <DependentUpon>replies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reply.Designer.cs">
+      <DependentUpon>reply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="request.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="request.Designer.cs">
+      <DependentUpon>request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resulte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="resulte.Designer.cs">
+      <DependentUpon>resulte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sing_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sing_in.Designer.cs">
+      <DependentUpon>sing_in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sing_up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sing_up.Designer.cs">
+      <DependentUpon>sing_up.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="chat.resx">
+      <DependentUpon>chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comment.resx">
+      <DependentUpon>comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comments.resx">
+      <DependentUpon>comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="friend.resx">
+      <DependentUpon>friend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="friend_chat.resx">
+      <DependentUpon>friend_chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liker.resx">
+      <DependentUpon>liker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="likers.resx">
+      <DependentUpon>likers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liker_comment.resx">
+      <DependentUpon>liker_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liker_reply.resx">
+      <DependentUpon>liker_reply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_page.resx">
+      <DependentUpon>main_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mess.resx">
+      <DependentUpon>mess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messages.resx">
+      <DependentUpon>messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="my_friends.resx">
+      <DependentUpon>my_friends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="post.resx">
+      <DependentUpon>post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="read_post.resx">
+      <DependentUpon>read_post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="replies.resx">
+      <DependentUpon>replies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reply.resx">
+      <DependentUpon>reply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="request.resx">
+      <DependentUpon>request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resulte.resx">
+      <DependentUpon>resulte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sing_in.resx">
+      <DependentUpon>sing_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sing_up.resx">
+      <DependentUpon>sing_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
